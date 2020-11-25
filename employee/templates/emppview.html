@@ -1,0 +1,41 @@
+{% extends 'empfirst.html' %}
+{% block content1%}
+
+<body>
+    <h1 class="text-primary text-center"> EMPLOYEE VIEW</h1><br>
+    <div class="container">
+        <table class="table table-striped ">
+            <tr style="background-color: black;">
+                <th style="color:turquoise">Employee id</th>
+                <th style="color:turquoise">Emp_Name</th>
+                <th style="color:turquoise"> Address</th>
+                <th style="color:turquoise">Phone</th>
+                <th style="color:turquoise">Email</th>
+                <th style="color:turquoise">Image</th>
+               
+                
+                
+            </tr>
+           
+                            {% for d in data %}
+                            <tr style="background-color: black;">
+                                <td style="color: white;">{{d.EmployeeId}}</td>
+                               <td style="color: white;">{{ d.EmployeeName}}</td>
+                               
+                                <td style="color: white;">{{ d.Address}}</td>
+                                <td style="color: white;">{{ d.Phone}}</td>
+                                <td style="color: white;">{{ d.Email }}</td>
+                                <td style="color: white;"> <img src="media/{{ d.Image }}" alt="noimage" width="50" height="50"></td>
+                                
+                                
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                 </body>
+                 {% endblock content1 %}
+                
+                
+                
+            
+
